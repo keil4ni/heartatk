@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>One Page Wonder - Start Bootstrap Template</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+
+
+
+
+
+
+
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="#page-top">AI CAMP - Team Placebo Detectors</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Overview</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#eda">EDA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Machinelearning">Machine Learning Models</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#conclusion">Conclusion</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#OurTeam">Our Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header class="masthead text-center text-white">
+            <div class="masthead-content">
+                <div class="container px-5">
+                    <h1 class="masthead-heading mb-0">Heart Attack Data Analysis</h1>
+                    <h2 class="masthead-subheading mb-0">Made by AI Camp Team Placebo Detectors</h2>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">Learn More</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
+        <!--Introduction--> 
+      <br><br>
+              <section id="scroll">
+            <div class="container-fluid px-5 justify-content-center">
+                <div class="row gx-5 align-items-center">
+                        <div class="p-5">
+                          <a name="about"></a>
+                            <h2 class="display-4">Dataset and Project Overview</h2>
+                            <p>Our <a href='https://www.kaggle.com/datasets/rashikrahmanpritom/heart-attack-analysis-prediction-dataset?select=heart.csv'> dataset</a> comes from kaggle.com and it focuses on different health conditions people have and tells us whether or not each person had a heart attack. <br></br> As for metrics used to predict heart attacks, this dataset takes into consideration things including age, sex, exercise induced angina, number of major vessels, chest pain, resting blood sugar, cholestoral, fasting blood sugar, resting electrocardiographic results, and maximum heart rate achieved. Using these metrics we found comparisons for different metrics in ratio to the overall chance of said person experiencing a heart attack some time in their future. <br></br> We also used this data set to create visual models to help predict the chance of having a heart attack.</p>
+                        </div>
+      
+                      <div class="p-5">
+                        <a name="eda"></a>
+                        <h2 class="display-4">Exploratory Data Analysis (EDA)</h2>
+                        <h3>Dataset</h3>
+<!--                         <p>Below are some figures which we used to help better understand our data</p> -->
+                        <br>
+                          <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style><table>
+                        <title>Heart Attack Data</title>
+                            <tr> 
+                              <th> </th>
+                              <th>age</th>
+                              <th>sex</th>
+                              <th>CP</th>
+                              <th>trtbps</th>
+                              <th>chol</th>
+                              <th>fbs</th>
+                              <th>restecg</th>
+                              <th>thalachh</th>
+                              <th>exng</th>
+                              <th>oldpeak</th>
+                              <th>slp</th>
+                              <th>caa</th>
+                              <th>thall</th>
+                              <th>output</th>
+                            </tr>
+                            <tr>
+                              <td>0</td>
+                              <td>63</td>
+                              <td>1</td>
+                              <td>3</td>
+                              <td>145</td>
+                              <td>233</td>
+                              <td>1</td>
+                              <td>0</td>
+                              <td>150</td>
+                              <td>0</td>
+                              <td>2.3</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>1</td>
+                              <td>37</td>
+                              <td>1</td>
+                              <td>2</td>
+                              <td>130</td>
+                              <td>250</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>187</td>
+                              <td>0</td>
+                              <td>3.5</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>41</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>130</td>
+                              <td>204</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>172</td>
+                              <td>0</td>
+                              <td>1.4</td>
+                              <td>2</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>56</td>
+                              <td>1</td>
+                              <td>1</td>
+                              <td>120</td>
+                              <td>236</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>178</td>
+                              <td>0</td>
+                              <td>0.8</td>
+                              <td>2</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td>57</td>
+                              <td>0</td>
+                              <td>0</td>
+                              <td>120</td>
+                              <td>354</td>
+                              <td>0</td>
+                              <td>1</td>
+                              <td>163</td>
+                              <td>1</td>
+                              <td>0.6</td>
+                              <td>2</td>
+                              <td>0</td>
+                              <td>2</td>
+                              <td>1</td>
+                            </tr>
+                          </table>
+                          <br>
+                        <p>
+                          Please note the following meaning of each metric. 
+                          <ul>
+                          <li>age: The person's age in years.</li>  
+                            <li>sex: The person’s sex (1 = male, 0 = female)</li>
+                            <li>cp: chest pain type (Value 0: asymptomatic, Value 1: atypical angina, Value 2: non-anginal pain, Value 3: typical angina) </li>
+                            <li>trtbps: The person’s resting blood pressure (mm Hg on admission to the hospital) </li>
+                            <li>chol: The person’s cholesterol measurement in mg/dl</li>
+                            <li>fbs: The person’s fasting blood sugar (> 120 mg/dl, 1 = true; 0 = false) </li>
+                            <li>restecg: resting electrocardiographic results (Value 0: showing probable or definite left ventricular hypertrophy by Estes’ criteria, Value 1: normal, Value 2: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV)) </li>
+                            <li>thalachh: The person’s maximum heart rate achieved </li>
+                            <li>exng: Exercise induced angina (1 = yes; 0 = no) </li>
+                            <li>oldpeak: ST depression induced by exercise relative to rest (‘ST’ relates to positions on the ECG plot. See more here) </li>
+                            <li>slp: the slope of the peak exercise ST segment — 0: downsloping; 1: flat; 2: upsloping </li>
+                            <li>ca: The number of major vessels (0–3) </li>
+                            <li>thall: A blood disorder called thalassemia Value 0: NULL (dropped from the dataset previously (Value 1: fixed defect (no blood flow in some part of the heart), Value 2: normal blood flow, Value 3: reversible defect (a blood flow is observed but it is not normal)) </li>
+                            <li>output: Heart disease (1 = no, 0= yes)</li>
+                        </ul>
+                          
+                        
+                        <h3>Correlation Heatmap</h3>
+                          <p>
+                            First we created a correlation table to see how different medical metrics correlated with the heart attack risk of a person. Some of the metrics that had the highest level of influence on the result included chest pain, maximum heart rate achieved in beats per minute, and presence of a single locus probe. Meanwhile, blood loss rate, ST depression induced by exercise relative to rest, number of major vessels, and a diagonoses of a heart disease known as thalassemia had high negative correlations to the end prediction.
+                          </p>
+                          <iframe width="1200" height="1050" src="assets/img/corr_heatmap.html"></iframe>
+                        <h3>Heart Attack Risk</h3>
+                        <center>
+                          <table style="border-collapse: collapse; border: none;" cellspacing='10'>
+                          <tr style="border: none;">
+                            <td style="border: none;">
+                              
+                          <iframe width="550" height="550" src="assets/img/Risk of a Heart Attack by Sex1.html"></iframe>
+                            </td>
+                              <td style="border: none;">
+                              <p text-align: left>
+                                  While the chance of a heart attack for males and females are fairly similar, males have a higher probability to get a heart attack overall.
+                                </p>
+                                <!-- trying text above graphs-->
+                              </td>
+                            </tr>
+                          </table>
+                          <table style="border-collapse: collapse; border: none;" cellspacing='10'>
+                        <tr style="border: none;">
+                          
+                            <td style="border: none;">
+                              
+                              
+                            <iframe width="550" height="550" src="assets/img/Risk of a Heart Attack by Age.html"></iframe>
+                          </td>
+                          <td style="border: none;">
+                            <p>
+                              As you can see from this histogram, there are two peaks where people are at the highest risk of having a heart attack: one peak contains people between the ages of 41-45 and the other peak contains people of ages 51-54. It also seems that people below the age of 40 and above the age of 70 have lower chances of getting a heart attack.
+                            </p>
+                            <!---->
+                          <!--i think it looks better if the text is side by side when u fullscreen it otherwise there's a lot of empty space on the sides-->
+                          </td>
+                            </tr>
+                          </table>
+                            </center>
+                            
+            <div class="container-fluid px-5 justify-content-center">
+                <div class="row gx-5 align-items-center">
+                        <div class="p-5">
+                          <a name="Machinelearning"></a>
+                            <h2 class="display-4">Integrating Machine Learning</h2>
+                            <p><u>Machine learning</u> is a beneficial aspect to our project that allows users to submit their data to our computer algorithm, which then analyzes it to make data-driven suggestions and decisions based only on the input data.<br><br>By examining variables such as age and sex, our models predict the chances of a possible heart attack. We also used a <font color='red'>confusion matrix</font color> to help us understand how well our model is performing, what kind of errors are being made (<em>if any</em>), and an overview of what we need to change to make our model as efficient and accurate as possible.</p>
+                          <br>
+                          <p><font color='red'>confusion matrix</font> = direct comparisons between actual values and predicted values are made to refine accuracy.
+                          </p>
+                          <br><br><br>
+                          <h3 class="display-4">About our Machine Learning Models</h3>
+                          <p> Our models use classification; instead of predicting a value through regression, they classify data into categories. We used 4 different machine learning models:<ol>
+                          <li>KNN Model</li>
+                          <li>SVM Model</li>
+                          <li>Random Forest Model</li>
+                          <li>Gradient Boosting Model</li>
+                          </ol><p>As you continue scrolling through our site, you will find information about each of our models and how we used them to represent our dataset. </p>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 1-->
+        <section>
+            <div class="container-fluid px-5">
+                <div class="row gx-5 align-items-center">
+                   
+                    <div class="">
+                        <div class="p-5">
+                            <h3 class="display-4">KNN Model</h3>
+                            <p>A <u>KNN model</u> is a supervised learning model that uses the distance between the neighbors around a point to check how similar they are and classify the point. The <em>k</em> is the amount of surrounding points that will be considered to classify a point.<br><br>In our KNN model, we created a for-loop to find an optimal k-value that gives us the best accuracy of classifying whether someone will experience a heart attack or not. When we plugged in one of our optimal k-values, we were able to get an <strong>accuracy of 88.5%</strong> and a <strong>recall value of 0.89</strong> <em><font color='red'>(false positive score of 4)</font></em>.</p>
+                          <br>
+                          <p>
+                          <font color='red'>false positive score of 4</font> = the probability that our KNN model determines that a person will have a heart attack in the future when in reality, they will not.
+                          </p>
+                        </div>
+                       <div class="justify-content">
+                        <div class="p-5"><img class="img-fluid" src="assets/img/KNNModel.png" width="800" alt="..." /></div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 2-->
+        <section>
+            <div class="container-fluid px-5">
+                <div class="row gx-5 align-items-center">
+                    <div class="">
+                        <div class="p-5">
+                            <h3 class="display-4">SVM Model</h3>
+                            <p>An <u>SVM model</u> is a model that finds a hyperplane (<em>a divider</em>) in an N-dimensional space.<br><br>The hyperplane helps separate and distinctly classify data points. To separate the two classes of data points, there are many possible hyperplanes that could be chosen. We needed to help the computer choose a hyperplane that provides the greatest accuracy when classifying data points, so SVM models were perfect for classification applications like ours.<br><br>Below, we have displayed an image of our confusion matrix to ensure that this model is reliable and lines of code we used to find the best hyperplane values (<em>GridSearchCV</em>).</p>
+                        </div>
+                    </div>
+                  <div class="">
+                        <center><img class="img-fluid" width="400" src="assets/img/SVMConfusionMatrix.png" alt="..." />
+                     <img class="img-fluid" width="500" src="assets/img/SVMGrid.png" alt="..." /></center>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content section 3-->
+        <section>
+            <div class="container-fluid px-5">
+                <div class="row gx-5 align-items-center">
+                    
+                    <div class="">
+                        <div class="p-5">
+                            <h3 class="display-4">Random Forests Model</h3>
+                            <p>A <u>random forest model</u> is a collection of decision trees which is used to help predict an outcome. Some examples of random forest models can be found in applications such as online personality quizzes or created when coding if-else statements. The random forest algorithm is an extension of the bagging method.<br><br>As this model is incredibly complex and requires an extensive fine tuning of its parameters, we created several variations of it to ensure that we receive consistent accuracy rate.<br><br>In one variation, we used a for-loop to fine tune the n_estimators and random_state variables. This resulted in us getting a <strong>very high accuracy of 96.7%</strong> and a <strong>recall value of 0.97</strong> <em><font color='red'>(false negative score of 1)</font></em>.
+                              <br><br>
+                              In another variation of the random forest model, we used GridSearchCV to find the optimal parameters for Random Forests. A <u>K-Fold Cross-Validation model</u> was also created to manipulate the testing and training sets using the best hyperparameters from the <u>GridSearchCV</u> to get the best accuracy. With this variation, we received an <strong>accuracy rate of 92%</strong> and a <strong>recall score of 0.947</strong>.</p><br>
+                      <p>
+                         <font color='red'>false negative score of 1</font> = the probability that our random forest model determines that someone will not have a heart attack in the future when in reality they will.
+                        <br>
+                          </p>
+                        </div>
+                    </div>
+                  
+                  <div class="">
+                        <div class="p-5"><img class="img-fluid" src="assets/img/RandomForestHum.png" width="700" alt="..." /></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Content section 4-->
+         <section>
+            <div class="container-fluid px-5">
+                <div class="row gx-5 align-items-center">
+                        <div class="p-5">
+                            <h3 class="display-4">Gradient Boosting Model</h3>
+                          <p>When we used our <u>gradient boosting model</u>, the accuracies were consistently around <strong>75%</strong>. This model relies a great deal on learning from mistakes made through past models.<br><br>We calculated the mean absolute error based off our testing data, and then proceeded to tune individual hyperparameters. We used n_estimators, learning rate, and other parameters to make predictions. We then used <u>GridSearchCV</u> to evaluate our best parameters and create a model based off these parameters and the gradient boosting classifier. A <u>confusion matrix</u> was created for this model to better display its accuracies, precisions, and an ROC curve highlighting a correlation between the true positive rate and the false positive rate.</p>
+                        </div>
+                  <div>
+                    <div class="p-5 flex-container">
+                      <img class="img-fluid"  width="400"src="assets/img/ROCcurve.png" alt="..." />
+                      <img class="img-fluid" width="400" src="assets/img/prerecall.png" alt="..." />
+                      <img class="img-fluid" width="400" src="assets/img/GradientBoostMatrix.png" alt="..." />
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+      <!--Content section 5-->
+         <section>
+            <div class="container-fluid px-5 justify-content-center">
+                <div class="row gx-5 align-items-center">
+                    <div>
+                        <!-- Insert conclusion images here-->
+                    </div>
+                    <div>
+                        <div class="p-5">
+                          <a name="conclusion"></a>
+                            <h2 class="display-4">Conclusion and Final Thoughts</h2>
+      <h3>Model Comparision</h3>
+                           <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+        }
+    </style><table>
+                            <tr> 
+                              <th>Model Name </th>
+                              <th>Accuracy Value</th>
+                              <th>Recall Value</th>
+                              <th>Precision Value</th>
+                            </tr>
+                            <tr>
+                              <td>KNN</td>
+                              <td>88.5%</td>
+                              <td>0.89</td>
+                              <td>0.763</td>
+                            </tr>
+                            <tr>
+                              <td>SVM</td>
+                              <td>85.25%</td>
+                              <td>0.944</td>
+                              <td>0.736</td>
+                            </tr>
+                            <tr>
+                              <td>Random Forest</td>
+                              <td>96.7%</td>
+                              <td>0.97</td>
+                              <td>0.450</td>
+                            </tr>
+                            <tr>
+                              <td>Random Forest (Gridsearch CV)</td>
+                              <td>92%</td>
+                              <td>0.947</td>
+                              <td>0.820</td>
+                            </tr>
+                            <tr>
+                              <td>Gradient Boosting</td>
+                              <td>77%</td>
+                              <td>0.784</td>
+                              <td>0.828</td>
+                            </tr>
+                          </table>
+                          <br>
+
+<p>In conclusion, we found that our <u>random forests model</u> performs the best as it was able to yield the greatest accuracy for predicting the likelihood of having a heart attack compared to other models. This model uses various decision trees that collects samples of the dataset and averages them out to make a final prediction, resulting in a high accuracy.</p>
+
+<h3>Why is this significant?</h3>
+<p>We found this project to be significant to us because by predicting the chances of a possible heart attack ahead of time, we give people the opportunity to take preventative measures such as going to the doctor, exercising more, and lowering blood pressure based on the produced results. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+   <div class="container-fluid px-5 justify-content-center" style="margin-bottom: 40px">
+      <div class="row gx-5 align-items-center">
+          <div class="p-5">
+              <a name="OurTeam"></a>
+              <h2 class="display-4">Our Team</h2>
+          </div>
+<div class="flex-container">
+   <div class="column">
+      <div class="container">
+        <h3>Humza Dalal</h3>
+        <p class="title">Data Scientist</p>
+                <img class="mx-auto rounded-circle" widht=150 height=150 src="./assets/img/AICampPhotoHumza.jpeg" alt="..." />
+      </div>
+   </div>
+   <div class="column">
+      <div class="container">
+        <h3>Himani Balaga</h3>
+        <p class="title">Data Scientist</p>
+        <img class="mx-auto rounded-circle" widht=150 height=150 src="./assets/img/himanipic.jpg" alt="..." />
+      </div>
+   </div>
+   <div class="column">
+      <div class="container">
+        <h3>Cecilia Beckerbauer</h3>
+        <p class="title">Data Scientist</p>
+        <img class="mx-auto rounded-circle" width=150 height=250 src="./assets/img/Cecilia.png" alt="..." />
+      </div>
+   </div>
+   <div class="column">
+      <div class="container">
+        <h3>Keilani Li</h3>
+        <p class="title">Data Scientist</p>
+                <img class="mx-auto rounded-circle" width=150 height=150 src="./assets/img/keilanipic2.jpg" alt="..." />
+      </div>
+   </div>
+   <div class="column">
+      <div class="container">
+        <h3>Caroline Lo</h3>
+        <p class="title">Data Scientist</p>
+        <img class="mx-auto rounded-circle" width=150 height=150 src="./assets/img/carolinepic.png" alt="..." />
+      </div>
+   </div>
+   <div class="column">
+      <div class="container">
+        <h3>Anya Shankar</h3>
+        <p class="title">Data Scientist</p>
+        <img class="mx-auto rounded-circle" width=150 height=250 src="./assets/img/anyapic.png" alt="..." />
+      </div>
+   </div>
+   <div class="column">
+      <div class="container">
+        <h3>Zhuoyu Feng</h3>
+        <p class="title">Instructor</p>
+        <img class="mx-auto rounded-circle" width=150 height=200  src="./assets/img/ZhuoyuFeng.jpg" alt="..." />
+      </div>
+   </div>
+</div>
+   </div>
+</div>
+      
+      
+      
+        <!-- Footer-->
+        <footer class="py-5 bg-black">
+            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; AI Camp 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
